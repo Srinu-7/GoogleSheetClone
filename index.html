@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Sheet</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fgit onts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body spellcheck="false">
+    <section class="top-section">
+      <div class="tags">
+        <div class="edit-properties">
+          <div class="sheet-image">
+            <img
+              src="https://www.gstatic.com/images/branding/product/1x/sheets_2020q4_48dp.png"
+            />
+          </div>
+          <div class="dual-properties">
+            <div class="representation">
+              <p>Untitled spreadsheet</p>
+              <span class="material-symbols-outlined">star</span>
+            </div>
+            <div class="file-properties">
+              <button>File</button>
+              <button>Edit</button>
+              <button>View</button>
+              <button>Insert</button>
+              <button>Format</button>
+              <button>Data</button>
+              <button>Tools</button>
+              <button>Extension</button>
+              <button>Help</button>
+            </div>
+          </div>
+        </div>
+        <div class="social-icons">
+          <span class="material-symbols-outlined">history</span>
+          <span class="material-symbols-outlined">comment</span>
+          <span class="material-symbols-outlined">videocam</span>
+          <div class="locked-section">
+            <span class="material-symbols-outlined">lock</span>
+            <p>Share</p>
+            <span class="material-symbols-outlined">arrow_drop_down</span>
+          </div>
+          <p id="img">M</p>
+        </div>
+      </div>
+      <div class="properties">
+        <div class="symbols">
+          <span class="material-symbols-outlined">search</span>
+          <span class="material-symbols-outlined">undo</span>
+          <span class="material-symbols-outlined">redo</span>
+          <span class="material-symbols-outlined">print</span>
+          <span class="material-symbols-outlined">attach_money</span>
+          <span class="material-symbols-outlined">arrow_back</span>
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </div>
+        <form id="form">
+          <select id="font-family" class = "cursor"name="font-family" value="default">
+            <option value="default">Default</option>
+            <option value = "Arial,sans-serif">Arial,sans-serif</option>
+          </select>
+          <input type="number" name="font-size" value="16" class = "cursor"/>
+          <div class="d-flex gap">
+            <div class="d-flex">
+              <input type="checkbox" name="isBold" id="isBold" />
+              <label class = "cursor"for="isBold"><span class="material-symbols-outlined">format_bold</span></label>
+            </div>
+            <div class="d-flex">
+              <input type="checkbox" name="isItalic" id="isItalic"/>
+              <label class = "cursor"for="isItalic"><span class="material-symbols-outlined">format_italic</span></label>
+            </div>
+            <div class="d-flex">
+              <input type="checkbox" name="isUnderline" id="isUnderline"/>
+              <label class = "cursor"for="isUnderline"><span class="material-symbols-outlined">format_underlined</span></label>
+            </div>
+          </div>
+          <div class = "d-flex gap">
+            <div class = "d-flex ">
+              <input type = "color" id = "text-color" name = "text-color">
+              <label class = "cursor"for = "text-color"><span class="material-symbols-outlined">format_color_text</span></label>
+          </div>
+          <div class = "d-flex">
+            <input type = "color" id = "bg-color" name = "bg-color" value = "#ffffff">
+            <label class = "cursor"for = "bg-color"><span class="material-symbols-outlined">border_color</span></label>
+          </div>
+          </div>
+          <div class="d-flex gap">
+            <div class="d-flex">
+              <input type="radio"name="horizontal-align"checked value="left"id="left"/>
+              <label class = "cursor"for="left"><span class="material-symbols-outlined">format_align_left</span></label>
+            </div>
+            <div class="d-flex">
+              <input type="radio"name="horizontal-align"value="center"id="center"/>
+              <label class = "cursor"for="center"><span class="material-symbols-outlined">format_align_center</span></label>
+            </div>
+            <div class="d-flex">
+              <input type="radio"name="horizontal-align"value="right"id="right"/>
+              <label class = "cursor"for="right"><span class="material-symbols-outlined">format_align_right</span></label>
+            </div>
+          </div>
+          
+        </form>
+        <div class = "d-flex gap">
+          <span id = "download-symbol"class="material-symbols-outlined cursor d-flex">cloud_download</span>
+          <input id = "upload" type = "file" style = "display:none">
+          <label for = "upload" class = "cursor d-flex"><span id = "upload-symbol"class="material-symbols-outlined">cloud_upload</span></label>
+        </div>
+        
+      </div>
+    </section>
+    <section class="functions">
+      <div class = "d-flex"id = "dis-ele">NA</div>
+      <label for="funexp">fx</label>
+      <input type="text" id="funExp" placeholder />
+    </section>
+    <div class="container">
+      <div class="blank"></div>
+      <div class="head-row" id="head-row-container"></div>
+      <div class="sr-no-container" id="sr-no-container"></div>
+      <div class="data-container" id="data-container"></div>
+    </div>
+    <div class = "sheets">
+        <button id = "create-sheet">Create New Sheets</button>
+        <div  class = "d-flex gap"id = "sheets"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
