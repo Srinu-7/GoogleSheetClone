@@ -263,3 +263,9 @@ input[type = "checkbox"]:checked+label,input[type = "radio"]:checked+label,input
     display: flex;
     gap:20px;
 }
+
+.sep{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
